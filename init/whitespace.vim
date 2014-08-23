@@ -6,4 +6,4 @@ function! StripTrailingWhitespace()
   call setpos('.', save_cursor)
 endfunction
 
-autocmd BufWritePre *.m,*.h,*.c,*.mm,*.cpp,*.hpp,*.js,*.html call StripTrailingWhitespace()
+autocmd BufWritePre * call StripTrailingWhitespace()

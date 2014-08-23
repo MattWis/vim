@@ -52,7 +52,8 @@ os.execute("git add -A; git commit -m 'Built'")
 os.execute("git submodule update --init --recursive")
 
 lfs.chdir("YouCompleteMe")
-os.execute("export CXX=g++; ./install.sh --clang-completer")
+--The --system-libclang option is highly not recommended, but works...
+os.execute("export CXX=g++; ./install.sh --clang-completer --system-libclang")
 lfs.chdir("../")
 
 lfs.chdir("../")
